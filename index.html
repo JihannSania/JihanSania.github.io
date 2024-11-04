@@ -1,52 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Portfolio Jihan Sania</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Animate.css -->
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    </head>
-    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        /* General styles for all devices */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
 
-    <!-- Bootstrap Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
+        /* Mobile Styles */
+        @media (max-width: 640px) {
+            section {
+                padding: 20px 10px;
+            }
+
+            h1 {
+                font-size: 2rem; /* Smaller font size for mobile */
+            }
+
+            h2 {
+                font-size: 1.5rem; /* Smaller font size for mobile */
+            }
+
+            .project-card img {
+                height: auto; /* Adjust image size */
+            }
+        }
+
+        /* Tablet Styles */
+        @media (min-width: 641px) and (max-width: 1024px) {
+            section {
+                padding: 40px 20px; /* More padding for tablet */
+            }
+
+            h1 {
+                font-size: 2.5rem; /* Medium font size for tablet */
+            }
+
+            h2 {
+                font-size: 2rem; /* Medium font size for tablet */
+            }
+
+            .project-card img {
+                height: 200px; /* Fixed height for images on tablet */
+            }
+        }
+
+        /* Desktop Styles */
+        @media (min-width: 1025px) {
+            section {
+                padding: 60px 30px; /* Larger padding for desktop */
+            }
+
+            h1 {
+                font-size: 3rem; /* Larger font size for desktop */
+            }
+
+            h2 {
+                font-size: 2.5rem; /* Larger font size for desktop */
+            }
+
+            .project-card img {
+                height: 250px; /* Fixed height for images on desktop */
+            }
+
+            /* Ensuring the grid layout does not overlap */
+            .grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+            }
+        }
+    </style>
 </head>
-<body>
-    <nav>
-        <div class="wrapper">
-            <div class="logo"><a href=" ">Jihan Sania</a></div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skill">Skill</a></li>
-                    <li><a href="#project">Project</a></li>
-                    <li><a href="#education">Pendidikan</a></li>
-                </ul>
-            </div>
+
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-600 shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Jihan Sania</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#about" class="text-white hover:text-blue-200">About</a></li>
+                <li><a href="#skill" class="text-white hover:text-blue-200">Skill</a></li>
+                <li><a href="#project" class="text-white hover:text-blue-200">Project</a></li>
+                <li><a href="#education" class="text-white hover:text-blue-200">Education</a></li>
+            </ul>
+            <button class="md:hidden text-white focus:outline-none" id="hamburger">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
         </div>
     </nav>
 
-    <section id="home">
-        <img src="foto1.jpg" alt="Foto Jihan Sania" class="animate__animated animate__fadeInLeft animate__delay-1s">
-        <div class="kolom animate__animated animate__fadeInRight animate__delay-1s">
-            <p class="deskripsi">Jihan Sania</p>
-            <h2>I'm Automotive Industry Information Systems</h2>
-            <p>I am a student of STMI Jakarta Polytechnic, majoring in Automotive Industry Information
-                Systems. I am currently in my 5th semester with a final GPA of 3.35 in the 4th semester. I am
-                passionate about web development and design, I enjoy creating effective and efficient applications
-                using modern tools such as PHP, Laravel, and Bootstrap. I focus on system development using the
-                System Development Life Cycle (SDLC), improving my skills in analysis and problem solving. I
-                am always eager to learn new technologies and work on interesting projects in the technology and
-                automotive fields.</p>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden bg-blue-600 p-4 hidden">
+        <ul class="flex flex-col space-y-2">
+            <li><a href="#about" class="text-white hover:text-blue-200">About</a></li>
+            <li><a href="#skill" class="text-white hover:text-blue-200">Skill</a></li>
+            <li><a href="#project" class="text-white hover:text-blue-200">Project</a></li>
+            <li><a href="#education" class="text-white hover:text-blue-200">Education</a></li>
+        </ul>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-200 to-blue-300 text-center">
+        <img src="foto1.jpg" alt="Foto Jihan Sania" class="w-40 h-40 rounded-full border-4 border-blue-500 shadow-lg mb-6 object-cover animate__animated animate__fadeInDown">
+        <h1 class="text-4xl font-bold text-blue-600 mb-2 animate__animated animate__fadeIn">Jihan Sania</h1>
+        <p class="text-lg text-gray-700 max-w-xl animate__animated animate__fadeIn animate__delay-1s">I am a student of STMI Jakarta Polytechnic, majoring in Automotive Industry Information
+            Systems. I am passionate about web development and design, I enjoy creating effective and efficient applications
+            using modern tools such as PHP, Laravel, and Bootstrap. I focus on system development using the
+            System Development Life Cycle (SDLC), improving my skills in analysis and problem solving. I
+            am always eager to learn new technologies and work on interesting projects in the technology and
+            automotive fields.</p>
+    </section>
+
+    <!-- Skill Section -->
+    <section id="skill" class="min-h-screen flex flex-col items-center justify-center bg-blue-100">
+        <h2 class="text-3xl font-bold mb-8 animate__animated animate__fadeIn">Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 container mx-auto px-4">
+            <div class="bg-white shadow-lg rounded-lg p-4 animate__animated animate__fadeIn animate__delay-1s">
+                <i class="bi bi-code-slash text-4xl mb-2"></i>
+                <h4 class="text-xl font-semibold">Web Development</h4>
+                <p>Menguasai HTML, CSS, JavaScript, dan Bootstrap untuk pengembangan front-end.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-4 animate__animated animate__fadeIn animate__delay-2s">
+                <i class="bi bi-terminal text-4xl mb-2"></i>
+                <h4 class="text-xl font-semibold">Backend Development</h4>
+                <p>Berpengalaman dalam menggunakan PHP dan framework Laravel untuk pengembangan backend.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-4 animate__animated animate__fadeIn animate__delay-3s">
+                <i class="bi bi-database text-4xl mb-2"></i>
+                <h4 class="text-xl font-semibold">Database Management</h4>
+                <p>Pengetahuan tentang MySQL dan SQL Server untuk mengelola dan mengembangkan basis data.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-4 col-span-1 md:col-span-3 animate__animated animate__fadeIn animate__delay-4s">
+                <h4 class="text-xl font-semibold">Soft Skills</h4>
+                <ul class="list-disc list-inside">
+                    <li>Kemampuan komunikasi yang baik</li>
+                    <li>Kerjasama tim</li>
+                    <li>Problem solving</li>
+                    <li>Adaptasi cepat terhadap teknologi baru</li>
+                </ul>
+            </div>
         </div>
     </section>
+
+    <!-- Project Section -->
+    <section id="project" class="min-h-screen flex flex-col items-center justify-center bg-blue-200 py-10">
+        <h2 class="text-3xl font-bold mb-12 animate__animated animate__fadeIn">Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 container mx-auto px-4">
+            <div class="bg-white shadow-lg rounded-lg p-4 transition-transform transform hover:scale-105 animate__animated animate__fadeIn animate__delay-1s project-card">
+                <img src="project1.jpg" alt="Project 1" class="w-full h-36 object-cover rounded-lg mb-2">
+                <h5 class="font-semibold text-lg">Project 1: Web E-commerce</h5>
+                <p class="text-gray-700 text-sm">Membangun platform e-commerce menggunakan Laravel dan Bootstrap untuk user experience yang optimal.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-4 transition-transform transform hover:scale-105 animate__animated animate__fadeIn animate__delay-2s project-card">
+                <img src="project2.jpg" alt="Project 2" class="w-full h-36 object-cover rounded-lg mb-2">
+                <h5 class="font-semibold text-lg">Project 2: Sistem Informasi Akademik</h5>
+                <p class="text-gray-700 text-sm">Pengembangan sistem informasi akademik untuk mempermudah pengelolaan data mahasiswa.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-4 transition-transform transform hover:scale-105 animate__animated animate__fadeIn animate__delay-3s project-card">
+                <img src="project3.jpg" alt="Project 3" class="w-full h-36 object-cover rounded-lg mb-2">
+                <h5 class="font-semibold text-lg">Project 3: Blog Pribadi</h5>
+                <p class="text-gray-700 text-sm">Membuat blog pribadi dengan fitur posting, komentar, dan pengelolaan user.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <!-- Education Section -->
+<section id="education" class="min-h-screen flex flex-col items-center justify-center bg-blue-300 py-10">
+    <h2 class="text-3xl font-bold mb-12 animate__animated animate__fadeIn">Education</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 container mx-auto px-4 justify-center items-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform hover:shadow-2xl hover:scale-105 animate__animated animate__fadeIn animate__delay-1s">
+            <h3 class="font-semibold text-xl">STMI Jakarta Polytechnic</h3>
+            <p class="text-gray-700">2022 - Present<br>Jurusan Sistem Informasi Manajemen<br>Automotive Industry Information Systems</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform hover:shadow-2xl hover:scale-105 animate__animated animate__fadeIn animate__delay-2s">
+            <h3 class="font-semibold text-xl">SMK Negeri 1 Jakarta</h3>
+            <p class="text-gray-700">2018 - 2021<br>Jurusan Teknik Komputer dan Jaringan</p>
+        </div>
     </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 py-4 text-center text-white">
+        <p>© 2024 Jihan Sania. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
+
 </html>
