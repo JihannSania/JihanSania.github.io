@@ -1,0 +1,116 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;    
+}
+
+.wrapper {
+    width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: courier;
+    color: #ffffff;
+}
+
+.menu {
+    float: right;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    line-height: 80px; 
+    position: sticky;
+    top: 0;
+    background: #00d5ff;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 16px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+    padding: 0 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+/* Style for the section to position the image */
+#home {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px; /* Adds spacing below the navbar */
+}
+
+#home img {
+    margin-top: 90px;
+    width: 350px; /* Sesuaikan lebar gambar */
+    height: 350px; /* Pastikan tinggi sama dengan lebar untuk bentuk lingkaran */
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+    object-fit: cover; /* Menghindari distorsi gambar */
+    border: 5px solid #0D92F4; /* Tambahkan border biru untuk kontras */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Bayangan untuk efek lebih menarik */
+    margin-left: 250px;
+}
+
+section {
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+/* Style for the section to position the image */
+#home {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-left: auto;
+    gap: 70px; /* Tambahkan jarak lebih besar antara gambar dan teks */
+}
+
+#home img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #0D92F4;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.kolom {
+    margin-top: 145px;
+    margin-bottom: 50px;
+    max-width: 700px; /* Batasi lebar teks */
+}
+
+.kolom .deskripsi {
+    font-size: 45px;
+    font-weight: 800;
+    font-family: 'Comic Sans MS';
+    margin: 20px 0;
+    color: #4A628A;
+    line-height: 50px;
+    margin: 10px;
+}
+
