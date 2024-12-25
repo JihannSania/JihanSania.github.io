@@ -7,6 +7,7 @@
     <title>Web Portfolio Jihan Sania</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* General styles for all devices */
         body {
@@ -109,7 +110,7 @@
 
     <!-- Home Section -->
     <section id="home" class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-200 to-blue-300 text-center">
-        <img src="foto1.jpg" alt="Foto Jihan Sania" class="w-40 h-40 rounded-full border-4 border-blue-500 shadow-lg mb-6 object-cover animate__animated animate__fadeInDown">
+        <img src="Gambar/foto1.jpg" alt="Foto Jihan Sania" class="w-40 h-40 rounded-full border-4 border-blue-500 shadow-lg mb-6 object-cover animate__animated animate__fadeInDown">
         <h1 class="text-4xl font-bold text-blue-600 mb-2 animate__animated animate__fadeIn">Jihan Sania</h1>
         <p class="text-lg text-gray-700 max-w-xl animate__animated animate__fadeIn animate__delay-1s">I am a student of STMI Jakarta Polytechnic, majoring in Automotive Industry Information
             Systems. I am passionate about web development and design, I enjoy creating effective and efficient applications
@@ -119,74 +120,102 @@
             automotive fields.</p>
     </section>
 
-    <!-- Skill Section -->
-    <section id="skill" class="min-h-screen flex flex-col items-center justify-center bg-blue-100">
-        <h2 class="text-3xl font-bold mb-8 animate__animated animate__fadeIn">Skills</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 container mx-auto px-4">
-            <div class="bg-white shadow-lg rounded-lg p-4 animate__animated animate__fadeIn animate__delay-1s">
-                <i class="bi bi-code-slash text-4xl mb-2"></i>
-                <h4 class="text-xl font-semibold">Web Development</h4>
-                <p>Menguasai HTML, CSS, JavaScript, dan Bootstrap untuk pengembangan front-end.</p>
-            </div>
-            <div class="bg-white shadow-lg rounded-lg p-4 animate__animated animate__fadeIn animate__delay-2s">
-                <i class="bi bi-terminal text-4xl mb-2"></i>
-                <h4 class="text-xl font-semibold">Backend Development</h4>
-                <p>Berpengalaman dalam menggunakan PHP dan framework Laravel untuk pengembangan backend.</p>
-            </div>
-            <div class="bg-white shadow-lg rounded-lg p-4 animate__animated animate__fadeIn animate__delay-3s">
-                <i class="bi bi-database text-4xl mb-2"></i>
-                <h4 class="text-xl font-semibold">Database Management</h4>
-                <p>Pengetahuan tentang MySQL dan SQL Server untuk mengelola dan mengembangkan basis data.</p>
-            </div>
-            <div class="bg-white shadow-lg rounded-lg p-4 col-span-1 md:col-span-3 animate__animated animate__fadeIn animate__delay-4s">
-                <h4 class="text-xl font-semibold">Soft Skills</h4>
-                <ul class="list-disc list-inside">
-                    <li>Kemampuan komunikasi yang baik</li>
-                    <li>Kerjasama tim</li>
-                    <li>Problem solving</li>
-                    <li>Adaptasi cepat terhadap teknologi baru</li>
-                </ul>
-            </div>
+<!-- Skill Section -->
+<section id="skill" class="min-h-screen flex flex-col items-center justify-center bg-blue-100">
+    <h2 class="text-3xl font-bold mb-8 animate__animated animate__fadeIn">My Skills</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 container mx-auto px-4">
+        <div class="bg-white shadow-lg rounded-lg p-6 flex items-center justify-center animate__animated animate__fadeIn animate__delay-1s">
+            <img src="Gambar/html.png" alt="HTML Icon" class="w-28 h-28 object-contain">
         </div>
-    </section>
+        <div class="bg-white shadow-lg rounded-lg p-6 flex items-center justify-center animate__animated animate__fadeIn animate__delay-1s">
+            <img src="Gambar/csss.jpg" alt="CSS Icon" class="w-28 h-28 object-contain">
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6 flex items-center justify-center animate__animated animate__fadeIn animate__delay-1s">
+            <img src="Gambar/bootstrapp.jpeg" alt="Bootstrap Icon" class="w-28 h-28 object-contain">
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6 flex items-center justify-center animate__animated animate__fadeIn animate__delay-1s">
+            <img src="Gambar/laravel.png" alt="Laravel Icon" class="w-30 h-28 object-contain">
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6 flex items-center justify-center animate__animated animate__fadeIn animate__delay-1s">
+            <img src="Gambar/php.png" alt="PHP Icon" class="w-30 h-28 object-contain">
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6 flex items-center justify-center animate__animated animate__fadeIn animate__delay-1s">
+            <img src="Gambar/tailwindcss.png" alt="Tailwind Icon" class="w-30 h-28 object-contain">
+        </div>
+    </div>
+
+    <!-- Soft Skills Section -->
+    <div class="mt-12 w-full flex flex-col items-center">
+        <h2 class="text-2xl font-bold mb-6">Soft Skills</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+            <span class="border border-blue-400 text-black-500 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition duration-300">Communication</span>
+            <span class="border border-blue-400 text-black-500 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition duration-300">Organization</span>
+            <span class="border border-blue-400 text-black-500 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition duration-300">Time Management</span>
+            <span class="border border-blue-400 text-black-500 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition duration-300">Team Work</span>
+            <span class="border border-blue-400 text-black-500 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition duration-300">Problem Solving</span>
+        </div>
+    </div>
+</section>
+    
 
     <!-- Project Section -->
     <section id="project" class="min-h-screen flex flex-col items-center justify-center bg-blue-200 py-10">
         <h2 class="text-3xl font-bold mb-12 animate__animated animate__fadeIn">Projects</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 container mx-auto px-4">
             <div class="bg-white shadow-lg rounded-lg p-4 transition-transform transform hover:scale-105 animate__animated animate__fadeIn animate__delay-1s project-card">
-                <img src="project1.jpg" alt="Project 1" class="w-full h-36 object-cover rounded-lg mb-2">
-                <h5 class="font-semibold text-lg">Project 1: Web E-commerce</h5>
-                <p class="text-gray-700 text-sm">Membangun platform e-commerce menggunakan Laravel dan Bootstrap untuk user experience yang optimal.</p>
+                <img src="Gambar/cashier.png" alt="Project 1" class="w-full h-36 object-cover rounded-lg mb-2">
+                <h5 class="font-semibold text-lg">Sistem Point Of Sales</h5>
+                <p class="text-gray-700 text-sm">Membuat Sistem POS untuk mengelola transaksi pada kasir toko</p>
             </div>
             <div class="bg-white shadow-lg rounded-lg p-4 transition-transform transform hover:scale-105 animate__animated animate__fadeIn animate__delay-2s project-card">
-                <img src="project2.jpg" alt="Project 2" class="w-full h-36 object-cover rounded-lg mb-2">
-                <h5 class="font-semibold text-lg">Project 2: Sistem Informasi Akademik</h5>
-                <p class="text-gray-700 text-sm">Pengembangan sistem informasi akademik untuk mempermudah pengelolaan data mahasiswa.</p>
+                <img src="Gambar/ui school.jpg" alt="Project 2" class="w-full h-36 object-cover rounded-lg mb-2">
+                <h5 class="font-semibold text-lg">UI/UX Desain Website Sekolah</h5>
+                <p class="text-gray-700 text-sm">Membuat Desain Website Sekolah SMP Negeri 27 Depok</p>
             </div>
             <div class="bg-white shadow-lg rounded-lg p-4 transition-transform transform hover:scale-105 animate__animated animate__fadeIn animate__delay-3s project-card">
-                <img src="project3.jpg" alt="Project 3" class="w-full h-36 object-cover rounded-lg mb-2">
-                <h5 class="font-semibold text-lg">Project 3: Blog Pribadi</h5>
-                <p class="text-gray-700 text-sm">Membuat blog pribadi dengan fitur posting, komentar, dan pengelolaan user.</p>
+                <img src="Gambar/dashboard.jpg" alt="Project 3" class="w-full h-36 object-cover rounded-lg mb-2">
+                <h5 class="font-semibold text-lg">Sistem Manajemen Inventory Bengkel (Laravel 10)</h5>
+                <p class="text-gray-700 text-sm">Membuat Sistem Manajemen Inventory dengan fitur; mengelola data barang, stok barang, data supplier, dan Laporan Barang Masuk dan Barang Keluar
+                    hingga dapat mencetak laporan
+                </p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-4 transition-transform transform hover:scale-105 animate__animated animate__fadeIn animate__delay-3s project-card">
+                <img src="Gambar/motor.jpg" alt="Project 3" class="w-full h-36 object-cover rounded-lg mb-2">
+                <h5 class="font-semibold text-lg">Sistem Transaksi Penjualan Motor Bekas (PHP Native)</h5>
+                <p class="text-gray-700 text-sm">Membuat Sistem Manajemen Inventory dengan fitur; mengelola data pembeli, data motor, dan Kwitansi
+                    hingga dapat mencetak kwitansi
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <!-- Education Section -->
-<section id="education" class="min-h-screen flex flex-col items-center justify-center bg-blue-300 py-10">
+<!-- Education Section -->
+<section id="education" class="min-h-screen flex flex-col items-center justify-center bg-blue-300 py-8">
     <h2 class="text-3xl font-bold mb-12 animate__animated animate__fadeIn">Education</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 container mx-auto px-4 justify-center items-center">
-        <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform hover:shadow-2xl hover:scale-105 animate__animated animate__fadeIn animate__delay-1s">
-            <h3 class="font-semibold text-xl">STMI Jakarta Polytechnic</h3>
-            <p class="text-gray-700">2022 - Present<br>Jurusan Sistem Informasi Manajemen<br>Automotive Industry Information Systems</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 container mx-auto px-4 justify-center items-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg flex items-start gap-4 transform transition-transform hover:shadow-2xl hover:scale-105 animate__animated animate__fadeIn animate__delay-1s">
+            <i class="fas fa-university text-blue-500 text-3xl"></i>
+            <div>
+                <h3 class="font-semibold text-xl">Politeknik STMI Jakarta</h3>
+                <p class="text-gray-700 mt-2">2022 - Present<br>Automotive Industry Information System <br> This study program prepares students to have the ability to implement Database Management,
+                    Database Implementation, understand Algorithms and Data Structures, and create Interaction and
+                    Interface Design, System Analysis and Design, System Testing and Implementation, and
+                    Information System Project Management.</p>
+            </div>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform hover:shadow-2xl hover:scale-105 animate__animated animate__fadeIn animate__delay-2s">
-            <h3 class="font-semibold text-xl">SMK Negeri 1 Jakarta</h3>
-            <p class="text-gray-700">2018 - 2021<br>Jurusan Teknik Komputer dan Jaringan</p>
+        <div class="bg-white p-6 rounded-lg shadow-lg flex items-start gap-4 transform transition-transform hover:shadow-2xl hover:scale-105 animate__animated animate__fadeIn animate__delay-2s">
+            <i class="fas fa-school text-blue-500 text-3xl"></i>
+            <div>
+                <h3 class="font-semibold text-xl">SMK Negeri 1 Jakarta</h3>
+                <p class="text-gray-700 mt-2">2018 - 2021<br>Majoring in Software Engineering<br>This major prepares students to have the ability to use data structures, implement User Interfaces,
+                    implement Structured Programming, Use SQL, Implement Programming Algorithms and Obtain
+                    a Competency Certificate from BNSP with KKNI Level II in Software Engineering Expertise
+                    Competency </p>
+            </div>
         </div>
     </div>
 </section>
+
 
 
     <!-- Footer -->
